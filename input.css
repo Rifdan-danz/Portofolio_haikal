@@ -16,6 +16,7 @@ color:white;
 header{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 10%;
 background:#020617;
 position:sticky;
@@ -34,6 +35,15 @@ text-decoration:none;
 
 nav a:hover{
 color:#38bdf8;
+}
+
+/* MENU HAMBURGER */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
 }
 
 
@@ -85,8 +95,9 @@ text-align:center;
 }
 
 .about h2{
-    color: #38bdf8;
+color:#38bdf8;
 }
+
 
 /* SKILLS */
 
@@ -96,7 +107,7 @@ text-align:center;
 }
 
 .skills h2{
-    color: #38bdf8;
+color:#38bdf8;
 }
 
 .skill-container{
@@ -133,7 +144,7 @@ text-align:center;
 }
 
 .project h2{
-    color: #38bdf8;
+color:#38bdf8;
 }
 
 .project-container{
@@ -162,7 +173,7 @@ text-align:center;
 }
 
 .contact h2{
-    color: #38bdf8;
+color:#38bdf8;
 }
 
 .social a{
@@ -198,4 +209,90 @@ transition:0.3s;
 .social a:hover{
 color:#38bdf8;
 transform:scale(1.2);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+/* hamburger muncul */
+
+.menu-toggle{
+display:block;
+}
+
+/* menu disembunyikan dulu */
+
+nav{
+display:none;
+flex-direction:column;
+width:100%;
+background:#020617;
+margin-top:10px;
+}
+
+nav.active{
+display:flex;
+}
+
+nav a{
+margin:10px 0;
+}
+
+header{
+flex-wrap:wrap;
+}
+
+/* hero */
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:70px 5%;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.hero-img{
+margin-top:30px;
+}
+
+.hero-img img{
+width:220px;
+}
+
+.about,
+.skills,
+.project,
+.contact{
+padding:60px 5%;
+}
+
+}
+
+
+/* HP kecil */
+
+@media (max-width:480px){
+
+.hero{
+padding:50px 5%;
+}
+
+.hero-text h1{
+font-size:26px;
+}
+
+.hero-img img{
+width:180px;
+}
+
+.btn{
+padding:8px 16px;
+font-size:14px;
+}
+
 }
